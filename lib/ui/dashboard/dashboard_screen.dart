@@ -19,7 +19,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
     return Scaffold(
-      backgroundColor: Color(0xffF3F7FF),
       body: IndexedStack(
         children: <Widget>[
           HomeScreen(),
@@ -41,13 +40,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
               type: BottomNavigationBarType.fixed,
               currentIndex: _currentIndex,
               backgroundColor: colorScheme.surface,
-              selectedItemColor: colorScheme.primary,
+              selectedItemColor: MyColors.primary,
               unselectedItemColor: colorScheme.onSurface.withOpacity(.40),
               selectedLabelStyle: textTheme.caption,
               unselectedLabelStyle: textTheme.caption,
               onTap: (value) {
-                // ScreenUtils(context).navigateTo(LoginScreen(), replaceScreen: true);
-                // Respond to item press.
+                if (value == 2) return;
                 setState(() => _currentIndex = value);
               },
               items: [

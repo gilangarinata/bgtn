@@ -10,6 +10,10 @@ class MyColors {
   static const Color brownDark = Color(0xFF343434);
   static const Color accentDark = Color(0xFFF048944);
   static const Color red = Color(0xFFF8E9EC);
+  static const Color background = Color(0xffF3F7FF);
+
+  static const Color backgroundDark = Color(0xff1D2639);
+  static const Color primaryDark = Color(0xff5B638E);
 
   static const Color baseShimmer = Color(0xFFE5E5E5);
   static const Color highlightShimmer = Color(0xFFD27070);
